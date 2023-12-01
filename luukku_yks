@@ -18,7 +18,6 @@ with open("file.txt") as tiedosto:
         
         luku = int(f"{eka}{toka}")
         yhteensa += luku
-
 print(yhteensa)
 
         
