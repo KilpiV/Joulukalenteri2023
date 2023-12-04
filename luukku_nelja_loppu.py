@@ -1,6 +1,11 @@
-yhteensa = 0
+
+kaikki = []
+indeksi = 0
+for i in range(218): 
+    kaikki.append(1)
 with open("file4_1.txt") as tiedosto:
     for rivi in tiedosto:
+        
         voitto_nrot = []
         omat_nrot = []
         samoja = 0
@@ -18,6 +23,8 @@ with open("file4_1.txt") as tiedosto:
         for nro in voitto_nrot:
             if nro in omat_nrot:
                 samoja += 1
-        if samoja > 0:
-            yhteensa += 2**(samoja-1)
-print(yhteensa)
+        for j in range(kaikki[indeksi]):
+            for i in range(samoja):
+                kaikki[indeksi+i+1] += 1
+        indeksi += 1
+print(sum(kaikki))
